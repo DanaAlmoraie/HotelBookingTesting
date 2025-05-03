@@ -131,7 +131,7 @@ public class ControllerTest {
         assertNotNull(result);
         assertTrue(result.isEmpty());
     }
-/*
+
     @Test
     public void test_TC11_BookRoom_Successful() {
         Controller controller = new Controller();
@@ -153,8 +153,8 @@ public class ControllerTest {
         assertNotNull("Room 2 should now be reserved", targetRoom.getUserReserved());
         assertEquals("Room 2 should be reserved by userId 1", 1, targetRoom.getUserReserved().getId());
     }
-*/
-/*
+
+
     @Test
     public void test_TC12_BookRoom_InvalidHotel_NoCrash() {
         Controller controller = new Controller();
@@ -164,8 +164,8 @@ public class ControllerTest {
 
 
         controller.bookRoom(2, 1, 999);  // this should just do nothing safely
-    }*/
-    /*
+    }
+    
     @Test
     public void test_TC13_BookRoom_NotLoggedIn_NoCrash() {
         Controller controller = new Controller();
@@ -174,7 +174,7 @@ public class ControllerTest {
 
         controller.bookRoom(2, 1, 1);
 
-    */
+    
     @Test
     public void test_TC14_BookRoom_InvalidRoomId_NoCrash() {
         Controller controller = new Controller();
