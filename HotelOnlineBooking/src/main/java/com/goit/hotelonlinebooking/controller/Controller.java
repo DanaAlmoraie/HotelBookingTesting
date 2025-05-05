@@ -43,6 +43,9 @@ public class Controller {
             return hotelList;
         }
     }
+    public List<Hotel> getHotelList() {
+        return hotelDAO.getList();
+    }
 
     public List<Hotel> findHotelByCity(String hotelCity) {
         List<Hotel> hotelList = new ArrayList<>();
