@@ -100,6 +100,7 @@ public class ControllerTest {
 
         assertNotNull(result);
         assertTrue(result.isEmpty());
+        System.out.println("No hotels found for an empty city name.");
     }
 
     //  TC8: Dnepr city, guest user
