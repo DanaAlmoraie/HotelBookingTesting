@@ -38,6 +38,27 @@ public class ControllerTest {
         assertFalse(result.isEmpty());
         assertTrue(result.stream().allMatch(r -> r.getUserReserved() == null));
     }
+        @Test
+    public void test_TC_AllRoomsReserved() {
+        controller.login(1);
+
+        User mockUser = new User(100, "Mock", "User", 30, "mock@user.com", "password", "Nowhere");
+
+        for (Hotel hotel : controller.getHotelList()) {
+            if (hotel.getHotelName().equals("Hayat")) {
+                for (Room room : hotel.getRooms()) {
+                    room.setUserReserved(mockUser);
+                }
+            }
+        }
+
+        List<Room> result = controller.getFreeRoomsByHotel("Hayat");
+
+        assertNotNull(result);
+        assertTrue(result.isEmpty());
+        System.out.println("All rooms in 'Hayat' are reserved.");
+    }
+
 
     //  TC2: Hotel does not exist
     @Test
